@@ -2,7 +2,8 @@ import React,{useState,useEffect} from 'react'
 import {Api_Path} from '../Pages/Link'
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
-import { MagnifyingGlass } from 'react-loader-spinner'
+import { HashLoader } from "react-spinners";
+
 
 function Chains() {
    const [Data,setData]=useState([]) 
@@ -56,7 +57,7 @@ function Chains() {
           {Loading && (
             <>
               <div className='Loading'>Your 🍜 is Loading...</div>
-              <MagnifyingGlass
+              <HashLoader
                 visible={true}
                 height="80"
                 width="80"
