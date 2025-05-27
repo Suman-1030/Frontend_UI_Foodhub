@@ -89,6 +89,9 @@ function Cart() {
              <p className='prname'>Product Name: {e.Productname}</p>
              <p className='prprice'>Price: /{e.Price}₹ Only</p>
              <p>{e.Category[0]}</p>
+             <p className='quantity'>Quantity: {
+    Data.items?.find(item => item.product === e._id)?.quantity || 1
+  }</p>
           </div>
           <div className='img'>
             <img src={`${Api_Path}/uploads/${e.image}`} alt={e.Productname} />

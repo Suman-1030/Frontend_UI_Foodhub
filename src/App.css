@@ -556,6 +556,9 @@ body{
   display: block;
   
 }
+.cart .items .det .quantity{
+  color: red;
+}
 .cart h2{
   margin-left: 350px;
   color: red;
