@@ -142,40 +142,46 @@ body{
   
   
   /* styles.css */
-.items {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-  margin-top: 80px;
-}
-
-.items > div {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.item-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease-in-out;
-  background-color: #fff;
-}
-
-.item-card:hover {
-  transform: scale(1.05);
-}
-
-.item-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
+  .items-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px; /* Optional: control max row width */
+  }
+  
+  .item-card {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .round-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eee;
+  }
+  
 
 .allchain h3{
   font-weight: 600;

@@ -12,17 +12,17 @@ function ItemsDisplay() {
   const [Showitems, setShowitems] = useState(Data);
 
   return (
-    <div className='items'>
-      <div>
-        {Showitems.map((e) => {
-          return (
-            <div key={e.id} className="item-card">
-              <img src={e.itemimg} alt="item" />
-            </div>
-          );
-        })}
-      </div>
+    <div className="items-wrapper">
+    <div className="items">
+      {Showitems.map((e) => (
+        <div key={e.id} className="item-card">
+          <img src={e.itemimg} alt="item" className="round-img" />
+        </div>
+      ))}
     </div>
+  </div>
+  
+  
   );
 }
 
