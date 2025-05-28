@@ -158,20 +158,10 @@ body{
   }
   
   .item-card {
-    width: 120px;
-    height: 120px;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-  }
-  
-  .item-card:hover {
-    transform: scale(1.05);
+    margin: 10px;
   }
   
   .round-img {
@@ -179,7 +169,12 @@ body{
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #eee;
+  }
+  
+  .itemsname {
+    margin-top: 8px;
+    text-align: center;
+    font-weight: 500;
   }
   
 
@@ -794,7 +789,9 @@ body{
 .ptbtn > div > button:hover {
   background-color: #0056b3;
 }
-
+.bflg{
+  font-size: 50px;
+}
 
 
 /* Responsiveness */
@@ -802,23 +799,39 @@ body{
 @media(max-width:576px){
 
    .Nav{
-    border: 2px solid red;
+    
     padding: 0 10px;
     
    }
+   .bflg{
+    font-size: 26px;
+    color: rgb(243, 109, 7);
+   }
    .Nav .Auth{
-    margin-left: 320px;
-    
+    margin-left: 200px;
+  
+   }
+   .Auth .logout{
+    margin-left: 40px;
    }
    
-  
-   .items {
+
+   .items-wrapper .items{
     display: flex;
-    flex-direction: column;   /* Stack items vertically */
-    align-items: center;      /* Center items in the column */
-    gap: 10px;    
-              /* Space between items */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   }
+   .round-img {
+    width: 60px;
+    height: 60px;
   }
+
+  .itemsname {
+    font-size: 14px;
+  }
+   
+  
   .Auth {
     display: flex;
     align-items: center;
