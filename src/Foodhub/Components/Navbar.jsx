@@ -16,15 +16,18 @@ function Navbar({ Loginhandler, Registerhandler, Logouthandler }) {
 
   return (
     <div className='Nav'>
+     
+      <div>
       <Link to={'/'} className='linked'>
         <div className='title'>
           <h1>Foodhub</h1>
         </div>
       </Link>
-
+      </div>
+      
       <div className="Auth">
         {isLoggedIn ? (
-          <>
+          <div className='cartlog'>
             <div className="logout">
               <span onClick={Logouthandler}>Logout</span>
             </div>
@@ -32,8 +35,8 @@ function Navbar({ Loginhandler, Registerhandler, Logouthandler }) {
               <span className="cart">
                 <FaCartPlus />
               </span>
-            </Link>
-          </>
+            </Link>                   
+          </div>
         ) : (
           <div className="auth-options">
             <span onClick={Loginhandler}>Login</span>

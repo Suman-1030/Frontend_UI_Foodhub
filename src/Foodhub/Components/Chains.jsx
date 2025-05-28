@@ -58,15 +58,12 @@ function Chains() {
             <>
               <div className='Loading'>Your 🍜 is Loading...</div>
               <HashLoader
-                visible={true}
-                height="80"
-                width="80"
-                ariaLabel="magnifying-glass-loading"
-                wrapperStyle={{}}
-                wrapperClass="magnifying-glass-wrapper"
-                glassColor="#c0efff"
                 color="#e15b64"
+                size={60}
+                aria-label="Loading Spinner"
+                loading={true}
               />
+
             </>
           )}
         </div>

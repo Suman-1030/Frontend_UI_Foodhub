@@ -796,26 +796,60 @@ body{
 
 /* Responsiveness */
 
-@media(max-width:576px){
+@media(max-width:480px){
 
-   .Nav{
-    
-    padding: 0 10px;
-    
-   }
-   .bflg{
-    font-size: 26px;
-    color: rgb(243, 109, 7);
-   }
-   .Nav .Auth{
-    margin-left: 200px;
+  .Nav {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   
-   }
-   .Auth .logout{
-    margin-left: 40px;
-   }
-   
+  .Auth {
+    display: flex;
+    align-items: center;
+    
+    
+  }
+  .Auth .logout{
+    margin-left: 200px;
+    
+  }
+  
 
+  
+  .cartlog {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* spacing between Logout and Cart */
+  }
+  
+  /* Optional: improve logout styling */
+  .logout span {
+    
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Optional: improve cart icon styling */
+  .cart {
+    font-size: 20px;
+    color: #2980b9;
+    cursor: pointer;
+  }
+  
+  /* Optional: auth-options for logged-out state */
+  .auth-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .auth-options span {
+    color: #2980b9;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
    .items-wrapper .items{
     display: flex;
     flex-direction: row;

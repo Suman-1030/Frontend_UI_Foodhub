@@ -44,7 +44,7 @@ function Landingpage() {
   return (
     <div>
       
-      <Navbar  Loginhandler={Loginhandler} Registerhandler={Registerhandler} Logout={Logout} Logouthandler={Logouthandler} LoginShower={LoginShower}/>
+      <Navbar  Loginhandler={Loginhandler} Registerhandler={Registerhandler}  Logouthandler={Logouthandler} />
       {LoginShower && <Banner/>}
      
      {!LoginShower && <BeforeLogin>
