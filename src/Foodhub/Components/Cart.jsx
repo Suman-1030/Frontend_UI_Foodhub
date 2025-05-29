@@ -81,35 +81,42 @@ function Cart() {
   }, []);
 
   return (
-    <div className='cart'>
-        <h2>Cart</h2>
-      {Product.map((e, v) => (
-        <div className='items' key={`${e._id}-${v}`}>
-          <div className='det'>
-             <p className='prname'>Product Name: {e.Productname}</p>
-             <p className='prprice'>Price: /{e.Price}₹ Only</p>
-             <p>{e.Category[0]}</p>
-             <p className='quantity'>Quantity: {
-    Data.items?.find(item => item.product === e._id)?.quantity || 1
-  }</p>
-          </div>
-          <div className='img'>
-            <img src={`${Api_Path}/uploads/${e.image}`} alt={e.Productname} />
-            <button className='Del' onClick={()=>{CartDel(localStorage.getItem('Userid'),e._id)}} >Delete</button>
-          </div>
+    <div className='Cart'>
+  <h2>Cart</h2>
 
-          
-          
-        </div>
-          
-      ))}
-      
-      <div className='total'>Total Price: {Data.totalPrice}</div>
-      <Link to={'/order'}>
-      <div className='Order'> {Data.totalPrice > 0 && <button>Order</button> }</div>
+  {Product.map((e, v) => (
+    <div className='items' key={`${e._id}-${v}`}>
+      <div className='det'>
+        <p className='prname'>Product Name: {e.Productname}</p>
+        <p className='prprice'>Price: /{e.Price}₹ Only</p>
+        <p>{e.Category[0]}</p>
+        <p className='quantity'>
+          Quantity: {
+            Data.items?.find(item => item.product === e._id)?.quantity || 1
+          }
+        </p>
+      </div>
 
-      </Link>
+      <div className='img'>
+        <img src={`${Api_Path}/uploads/${e.image}`} alt={e.Productname} />
+        <button className='Del' onClick={() => CartDel(localStorage.getItem('Userid'), e._id)}>
+          Delete
+        </button>
+      </div>
     </div>
+  ))}
+  
+  <div className='ord'>
+
+  <div className='total'>Total Price: {Data.totalPrice}</div>
+
+  <Link to={'/order'}>
+    <div className='Order'>
+      {Data.totalPrice > 0 && <button>Order</button>}
+    </div>
+  </Link>
+</div>
+ </div>
   );
 }
 
