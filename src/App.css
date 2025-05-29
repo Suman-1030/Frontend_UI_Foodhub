@@ -903,7 +903,15 @@ body{
     left: 190px;
     top: 2px;
    }
+   .chainup{
+    border: 2px solid red;
+    display: flex;
+    justify-content:space-between;
 
+   }
+   .chainup .btns{
+    margin-right: 10px;
+   }
    .chain {
    width: 80%;
    
