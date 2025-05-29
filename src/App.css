@@ -93,7 +93,7 @@ body{
     margin: 10px;
     font-size: 20px;
     margin-right: 70px;
-    border: 2px solid red;
+   
     margin-left: 50px;
 }
 
@@ -817,7 +817,7 @@ body{
     
   }
   .Auth .logout{
-    margin-left: 40px;
+    margin-left: 80px;
     
   }
   .Auth .cart{
@@ -901,19 +901,16 @@ body{
     margin-left: 30px;
     position: absolute;
     left: 190px;
-    top: 2px;
+    top: 20px;
    }
    .chainup{
-    border: 2px solid blue;
+    
     width: 100%;
     display: flex;
     justify-content:space-between;
 
    }
-   .chainup .btns{
-  
-    border: 2px solid red;
-   }
+   
    .chain {
    width: 80%;
    
