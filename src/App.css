@@ -875,9 +875,15 @@ body{
   }
 
   
-  .allchain .chainup{
-    padding: 10px;
+  .allchain{
+   
+    padding: auto;
     position: relative;
+  }
+  .allchain .chainup{
+   
+    padding: 10px;
+    
   }
 
   .allchain .chainup h3 {
@@ -885,11 +891,26 @@ body{
   }
 
   .allchain .chainup .btns{
-    margin: 5px;
+    margin-left: 30px;
     position: absolute;
-    right: 20px;
+    left: 190px;
     top: 2px;
    }
+
+   .chain {
+   width: 80%;
+   
+   padding: 0 20px;
+   margin-left: 10px;
+
+   }
+  .chain .Details .image{
+    margin: 10px;
+  }
+  .image img {
+    height: 140px;
+  }
+
    .Firmcollection {
      display: block;
     
