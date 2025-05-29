@@ -796,7 +796,7 @@ body{
 
 /* Responsiveness */
 
-@media(max-width:480px){
+@media(max-width:576px){
 
   .Nav {
     padding: 0 20px;
