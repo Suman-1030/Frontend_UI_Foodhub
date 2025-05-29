@@ -883,8 +883,8 @@ body{
 
   
   .allchain{
-   
-    padding: auto;
+    
+   width: 100%;
     position: relative;
   }
   .allchain .chainup{
@@ -894,7 +894,7 @@ body{
   }
 
   .allchain .chainup h3 {
-   margin-left: 10px;
+   margin-right: 300px;
   }
 
   .allchain .chainup .btns{
@@ -904,13 +904,15 @@ body{
     top: 2px;
    }
    .chainup{
-    border: 2px solid red;
+    border: 2px solid blue;
+    width: 100%;
     display: flex;
     justify-content:space-between;
 
    }
    .chainup .btns{
-    margin-right: 10px;
+  
+    border: 2px solid red;
    }
    .chain {
    width: 80%;
