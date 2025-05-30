@@ -17,9 +17,9 @@ function Navbar({ Loginhandler, Registerhandler, Logouthandler }) {
   return (
     <div className='Nav'>
      
-      <div>
+      <div className='title'>
       <Link to={'/'} className='linked'>
-        <div className='title'>
+        <div >
           <h1>Foodhub</h1>
         </div>
       </Link>
