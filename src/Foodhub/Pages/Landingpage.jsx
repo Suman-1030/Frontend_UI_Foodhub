@@ -49,7 +49,7 @@ function Landingpage() {
      
      {!LoginShower && <BeforeLogin>
       {ShowLogin &&  <Login/>}
-      {ShowRegister && <Register/>}
+      {ShowRegister && <Register ShowLogin={LoginShower}/>}
       </BeforeLogin>}
       
       

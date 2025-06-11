@@ -5,11 +5,13 @@ function Login({Welcomehandler}) {
 const [Email,setEmail]=useState("")
 const [Password,setPassword]=useState("")
 const [data,setdata]=useState("")
+const [Loading,setLoading]=useState("")
 
 
 
 const Loginhandler=async (e)=>{
-  
+    
+  setLoading(true)
     e.preventDefault()
     try{
       const response=await fetch(`${Api_Path}/user/Login`,{
@@ -25,6 +27,7 @@ const Loginhandler=async (e)=>{
        localStorage.setItem('login Token',Data.token)
        localStorage.setItem('Userid',Data.UserId)
        setdata(Data)
+       setLoading(false)
       
      }
      if(!response.ok){
@@ -56,7 +59,7 @@ const Loginhandler=async (e)=>{
             <label>Password</label>
             <input type='password' name='Password' onChange={(e)=>{setPassword(e.target.value)}} placeholder='Enter your password'/><br/>
 
-            <button type='submit'>Submit</button>
+            <button type='submit'>{Loading?(<div>Submitting...</div>):(<div>Submit</div>)}</button>
         </form>
       
     </div>

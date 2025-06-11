@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { Api_Path } from '../Pages/Link'
 
-function Register({Loginhandler}) {
+function Register({Loginhandler,LoginShower}) {
  const [Username,setUsername]=useState("")
  const [Email,setEmail]=useState("")
  const [Password,setPassword]=useState("")
@@ -21,10 +21,12 @@ function Register({Loginhandler}) {
         
         const Data=await response.json()
         
-        setLoading(false)
+       
         
         if(response.ok){
           setdata(Data)
+          Loginhandler()
+          setLoading(false)
           alert("your registered successfully")
           
         }
@@ -43,7 +45,7 @@ function Register({Loginhandler}) {
       }
     }
 
- {Loading ? (<p>Loading...</p>):(<p>{data}</p>)}
+ 
  
  
   return (
@@ -59,7 +61,7 @@ function Register({Loginhandler}) {
             <label>Password</label> 
             <input type='password' name='Password' placeholder='enter your password'  onChange={(e)=>{setPassword(e.target.value)}}/><br/>
 
-             <button type='submit'>Submit</button>
+             <button type='submit'>{Loading?(<div>Submitting</div>):(<div> Submit </div>)}</button>
         </form>
       </div>
     
