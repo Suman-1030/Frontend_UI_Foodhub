@@ -108,11 +108,11 @@ function Cart() {
   
   <div className='ord'>
 
-  <div className='total'>Total Price: {Data.totalPrice}</div>
+  <div className='total'>Total Price: {Data && Data.totalPrice}</div>
 
   <Link to={'/order'}>
     <div className='Order'>
-      {Data.totalPrice > 0 && <button>Order</button>}
+      {Data?.totalPrice > 0 && <button>Order</button>}
     </div>
   </Link>
 </div>
