@@ -9,6 +9,7 @@ import Searchproducts from './Foodhub/Components/Searchproducts'
 function App() {
   return (
     <div>
+      
       <Routes>
             <Route path='/' element={<Landingpage/>}/>
             <Route path='/products/:Firmid/:Firmname' element={<Productspage/>}/>
