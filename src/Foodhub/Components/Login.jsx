@@ -31,8 +31,8 @@ const Loginhandler=async (e)=>{
       
      }
      if(!response.ok){
-        if ((response.status===404) &&(Data.msg=="Vendor not found")){
-          alert("vendor not Registered")
+        if ((response.status===404) &&(Data.msg=="user not found")){
+          alert("user not Registered")
         }
         if ((response.status===400) &&(Data.msg=="Invalid password")){
           alert("Incorrect password")
