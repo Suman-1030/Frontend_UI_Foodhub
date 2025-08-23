@@ -4,7 +4,6 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 import { HashLoader } from "react-spinners";
 
-
 function Chains() {
    const [Data,setData]=useState([]) 
    const [Scroll, setScroll]=useState(0)
@@ -12,7 +11,8 @@ function Chains() {
    
    
    
-   
+
+
    async function Getdata(){
 
      try{    
